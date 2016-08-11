@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "MenuViewController.h"
+#import "CalculatorViewController.h"
 
 @interface ViewController ()
 
@@ -14,9 +16,22 @@
 
 @implementation ViewController
 
+@synthesize managedObjectContext;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    NSManagedObjectContext *context = [self managedObjectContext];
+    if (!context) {
+        NSLog(@"There is an error!!!");
+    }
+    
+    if (context == nil) {
+        NSLog(@"Context is nil in viewController");
+    }
+    else {
+        NSLog(@"Context is set in viewController");
+    }
 }
 
 - (void)didReceiveMemoryWarning {

@@ -1,4 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15G31" minimumToolsVersion="Automatic">
+    <entity name="Exercise" syncable="YES">
+        <attribute name="duration" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="exerciseName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="reps" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="Food" representedClassName="Food" syncable="YES">
+        <attribute name="carbServ" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="carbServCalc" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="fatServ" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="fatServCalc" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="foodName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="proServ" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="proServCalc" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="servingSize" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="servSizeCalc" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="targetNutrient" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="targetServ" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="timeStamp" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="Person" representedClassName="Person" syncable="YES">
+        <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="height" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="weight" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="consumesForEnergy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Food" syncable="YES"/>
+        <relationship name="doingUsesEnergy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Exercise" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Person" positionX="-74" positionY="-243" width="128" height="133"/>
+        <element name="Food" positionX="-261" positionY="-36" width="128" height="223"/>
+        <element name="Exercise" positionX="88" positionY="0" width="128" height="90"/>
+    </elements>
 </model>

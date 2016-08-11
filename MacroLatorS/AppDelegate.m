@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
+#import "CalculatorViewController.h"
+#import "Person.h"
+#import "Food.h"
 
 @interface AppDelegate ()
 
@@ -14,9 +18,30 @@
 
 @implementation AppDelegate
 
+@synthesize window = _window;
+@synthesize managedObjectContext = _managedObjectContext;
+@synthesize managedObjectModel = _managedObjectModel;
+@synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    // Fetch Main Storyboard
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+    
+    // Instantiate Root Navigation Controller
+    UINavigationController *rootNavigationController = (UINavigationController *)[mainStoryboard instantiateViewControllerWithIdentifier:@"rootNavigationController"];
+    
+    // Configure View Controller
+    ViewController *viewController = (ViewController *)[rootNavigationController topViewController];
+    
+    if ([viewController isKindOfClass:[ViewController class]]) {
+        [viewController setManagedObjectContext:self.managedObjectContext];
+    }
+    
+    // Configure Window
+    [self.window setRootViewController:rootNavigationController];
+    
     return YES;
 }
 
@@ -44,11 +69,8 @@
     [self saveContext];
 }
 
-#pragma mark - Core Data stack
 
-@synthesize managedObjectContext = _managedObjectContext;
-@synthesize managedObjectModel = _managedObjectModel;
-@synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
+#pragma mark - Core Data stack
 
 - (NSURL *)applicationDocumentsDirectory {
     // The directory the application uses to store the Core Data store file. This code uses a directory named "com.alanvitullo.MacroLatorS" in the application's documents directory.

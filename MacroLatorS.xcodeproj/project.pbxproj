@@ -16,6 +16,15 @@
 		37FC9AF31D5A9721003F4234 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37FC9AF11D5A9721003F4234 /* LaunchScreen.storyboard */; };
 		37FC9AFE1D5A9721003F4234 /* MacroLatorSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FC9AFD1D5A9721003F4234 /* MacroLatorSTests.m */; };
 		37FC9B091D5A9721003F4234 /* MacroLatorSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FC9B081D5A9721003F4234 /* MacroLatorSUITests.m */; };
+		37FC9B1E1D5AA2CC003F4234 /* Person+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FC9B171D5AA2CC003F4234 /* Person+CoreDataProperties.m */; };
+		37FC9B1F1D5AA2CC003F4234 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FC9B191D5AA2CC003F4234 /* Person.m */; };
+		37FC9B201D5AA2CC003F4234 /* Food+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FC9B1B1D5AA2CC003F4234 /* Food+CoreDataProperties.m */; };
+		37FC9B211D5AA2CC003F4234 /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FC9B1D1D5AA2CC003F4234 /* Food.m */; };
+		37FC9B271D5AFACA003F4234 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FC9B251D5AFACA003F4234 /* MenuViewController.m */; };
+		37FC9B281D5AFACA003F4234 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37FC9B261D5AFACA003F4234 /* MenuViewController.xib */; };
+		37FC9B2C1D5B05DE003F4234 /* CalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FC9B2B1D5B05DE003F4234 /* CalculatorViewController.m */; };
+		37FC9B361D5B135B003F4234 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FC9B351D5B135B003F4234 /* DetailViewController.m */; };
+		37FC9B3A1D5B13F4003F4234 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FC9B391D5B13F4003F4234 /* NavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +62,23 @@
 		37FC9B041D5A9721003F4234 /* MacroLatorSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacroLatorSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		37FC9B081D5A9721003F4234 /* MacroLatorSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MacroLatorSUITests.m; sourceTree = "<group>"; };
 		37FC9B0A1D5A9721003F4234 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37FC9B161D5AA2CC003F4234 /* Person+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Person+CoreDataProperties.h"; path = "../Person+CoreDataProperties.h"; sourceTree = "<group>"; };
+		37FC9B171D5AA2CC003F4234 /* Person+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Person+CoreDataProperties.m"; path = "../Person+CoreDataProperties.m"; sourceTree = "<group>"; };
+		37FC9B181D5AA2CC003F4234 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Person.h; path = ../Person.h; sourceTree = "<group>"; };
+		37FC9B191D5AA2CC003F4234 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Person.m; path = ../Person.m; sourceTree = "<group>"; };
+		37FC9B1A1D5AA2CC003F4234 /* Food+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Food+CoreDataProperties.h"; path = "../Food+CoreDataProperties.h"; sourceTree = "<group>"; };
+		37FC9B1B1D5AA2CC003F4234 /* Food+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Food+CoreDataProperties.m"; path = "../Food+CoreDataProperties.m"; sourceTree = "<group>"; };
+		37FC9B1C1D5AA2CC003F4234 /* Food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Food.h; path = ../Food.h; sourceTree = "<group>"; };
+		37FC9B1D1D5AA2CC003F4234 /* Food.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Food.m; path = ../Food.m; sourceTree = "<group>"; };
+		37FC9B241D5AFACA003F4234 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		37FC9B251D5AFACA003F4234 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		37FC9B261D5AFACA003F4234 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		37FC9B2A1D5B05DE003F4234 /* CalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorViewController.h; sourceTree = "<group>"; };
+		37FC9B2B1D5B05DE003F4234 /* CalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorViewController.m; sourceTree = "<group>"; };
+		37FC9B341D5B135B003F4234 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		37FC9B351D5B135B003F4234 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		37FC9B381D5B13F4003F4234 /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
+		37FC9B391D5B13F4003F4234 /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,13 +131,9 @@
 			children = (
 				37FC9AE31D5A9721003F4234 /* AppDelegate.h */,
 				37FC9AE41D5A9721003F4234 /* AppDelegate.m */,
-				37FC9AE61D5A9721003F4234 /* ViewController.h */,
-				37FC9AE71D5A9721003F4234 /* ViewController.m */,
-				37FC9AE91D5A9721003F4234 /* Main.storyboard */,
-				37FC9AEF1D5A9721003F4234 /* Assets.xcassets */,
-				37FC9AF11D5A9721003F4234 /* LaunchScreen.storyboard */,
-				37FC9AF41D5A9721003F4234 /* Info.plist */,
-				37FC9AEC1D5A9721003F4234 /* MacroLatorS.xcdatamodeld */,
+				37FC9B3E1D5D1A3E003F4234 /* Storyboards */,
+				37FC9B371D5B138B003F4234 /* Navigation Controllers */,
+				37FC9B231D5AA34D003F4234 /* View Controllers */,
 				37FC9AE01D5A9721003F4234 /* Supporting Files */,
 			);
 			path = MacroLatorS;
@@ -121,6 +143,9 @@
 			isa = PBXGroup;
 			children = (
 				37FC9AE11D5A9721003F4234 /* main.m */,
+				37FC9AEF1D5A9721003F4234 /* Assets.xcassets */,
+				37FC9AF41D5A9721003F4234 /* Info.plist */,
+				37FC9B221D5AA323003F4234 /* Data Model */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -141,6 +166,64 @@
 				37FC9B0A1D5A9721003F4234 /* Info.plist */,
 			);
 			path = MacroLatorSUITests;
+			sourceTree = "<group>";
+		};
+		37FC9B221D5AA323003F4234 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				37FC9AEC1D5A9721003F4234 /* MacroLatorS.xcdatamodeld */,
+				37FC9B181D5AA2CC003F4234 /* Person.h */,
+				37FC9B191D5AA2CC003F4234 /* Person.m */,
+				37FC9B1C1D5AA2CC003F4234 /* Food.h */,
+				37FC9B1D1D5AA2CC003F4234 /* Food.m */,
+				37FC9B331D5B0BF0003F4234 /* Properties */,
+			);
+			name = "Data Model";
+			sourceTree = "<group>";
+		};
+		37FC9B231D5AA34D003F4234 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				37FC9AE61D5A9721003F4234 /* ViewController.h */,
+				37FC9AE71D5A9721003F4234 /* ViewController.m */,
+				37FC9B2A1D5B05DE003F4234 /* CalculatorViewController.h */,
+				37FC9B2B1D5B05DE003F4234 /* CalculatorViewController.m */,
+				37FC9B241D5AFACA003F4234 /* MenuViewController.h */,
+				37FC9B251D5AFACA003F4234 /* MenuViewController.m */,
+				37FC9B261D5AFACA003F4234 /* MenuViewController.xib */,
+				37FC9B341D5B135B003F4234 /* DetailViewController.h */,
+				37FC9B351D5B135B003F4234 /* DetailViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		37FC9B331D5B0BF0003F4234 /* Properties */ = {
+			isa = PBXGroup;
+			children = (
+				37FC9B161D5AA2CC003F4234 /* Person+CoreDataProperties.h */,
+				37FC9B171D5AA2CC003F4234 /* Person+CoreDataProperties.m */,
+				37FC9B1A1D5AA2CC003F4234 /* Food+CoreDataProperties.h */,
+				37FC9B1B1D5AA2CC003F4234 /* Food+CoreDataProperties.m */,
+			);
+			name = Properties;
+			sourceTree = "<group>";
+		};
+		37FC9B371D5B138B003F4234 /* Navigation Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				37FC9B381D5B13F4003F4234 /* NavigationController.h */,
+				37FC9B391D5B13F4003F4234 /* NavigationController.m */,
+			);
+			name = "Navigation Controllers";
+			sourceTree = "<group>";
+		};
+		37FC9B3E1D5D1A3E003F4234 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				37FC9AE91D5A9721003F4234 /* Main.storyboard */,
+				37FC9AF11D5A9721003F4234 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +335,7 @@
 				37FC9AF31D5A9721003F4234 /* LaunchScreen.storyboard in Resources */,
 				37FC9AF01D5A9721003F4234 /* Assets.xcassets in Resources */,
 				37FC9AEB1D5A9721003F4234 /* Main.storyboard in Resources */,
+				37FC9B281D5AFACA003F4234 /* MenuViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,10 +360,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37FC9B1F1D5AA2CC003F4234 /* Person.m in Sources */,
+				37FC9B271D5AFACA003F4234 /* MenuViewController.m in Sources */,
+				37FC9B2C1D5B05DE003F4234 /* CalculatorViewController.m in Sources */,
+				37FC9B211D5AA2CC003F4234 /* Food.m in Sources */,
 				37FC9AE81D5A9721003F4234 /* ViewController.m in Sources */,
 				37FC9AE51D5A9721003F4234 /* AppDelegate.m in Sources */,
 				37FC9AE21D5A9721003F4234 /* main.m in Sources */,
+				37FC9B361D5B135B003F4234 /* DetailViewController.m in Sources */,
+				37FC9B1E1D5AA2CC003F4234 /* Person+CoreDataProperties.m in Sources */,
+				37FC9B3A1D5B13F4003F4234 /* NavigationController.m in Sources */,
 				37FC9AEE1D5A9721003F4234 /* MacroLatorS.xcdatamodeld in Sources */,
+				37FC9B201D5AA2CC003F4234 /* Food+CoreDataProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
