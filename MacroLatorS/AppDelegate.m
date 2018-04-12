@@ -7,12 +7,11 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
 #import "CalculatorViewController.h"
-#import "Person.h"
+#import "SavedCDTVC.h"
 #import "Food.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <UINavigationControllerDelegate>
 
 @end
 
@@ -25,18 +24,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
+    [NSThread sleepForTimeInterval:1.0];
     // Fetch Main Storyboard
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
     
     // Instantiate Root Navigation Controller
     UINavigationController *rootNavigationController = (UINavigationController *)[mainStoryboard instantiateViewControllerWithIdentifier:@"rootNavigationController"];
     
-    // Configure View Controller
-    ViewController *viewController = (ViewController *)[rootNavigationController topViewController];
+    rootNavigationController.delegate = self;
     
-    if ([viewController isKindOfClass:[ViewController class]]) {
-        [viewController setManagedObjectContext:self.managedObjectContext];
+    // Configure View Controller
+    CalculatorViewController *calculatorViewController = (CalculatorViewController *)[rootNavigationController topViewController];
+    
+    if ([calculatorViewController isKindOfClass:[CalculatorViewController class]]) {
+        [calculatorViewController setManagedObjectContext:self.managedObjectContext];
     }
     
     // Configure Window

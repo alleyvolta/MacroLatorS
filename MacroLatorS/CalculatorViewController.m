@@ -7,9 +7,9 @@
 //
 
 #import "CalculatorViewController.h"
-#import "Person.h"
+#import "math.h"
 #import "Food.h"
-#import <CoreData/CoreData.h>
+#import "SavedCDTVC.h"
 
 @interface CalculatorViewController () 
 
@@ -54,6 +54,7 @@ NSString *targetNutrient;
 }
 
 - (IBAction)displayValues:(id)sender {
+    NSString *labelTemp;
     //Input from text fields
     servSize = [_servingSize.text floatValue];
     carbServ = [_carbsServing.text floatValue];
@@ -81,12 +82,28 @@ NSString *targetNutrient;
                 proServCalc = servRatio*proServ;
                 fatServCalc = servRatio*fatServ;
                 targetServCalc = targetServ;
+                
                 //Output to label
-                _calculatedNutrient.text = [NSString stringWithFormat:@"%.0f", targetServCalc];
-                _calculatedServing.text = [NSString stringWithFormat:@"%.0f", servSizeCalc];
-                _calculatedCarbs.text = [NSString stringWithFormat:@"%.0f", carbServCalc];
-                _calculatedProtein.text = [NSString stringWithFormat:@"%.0f", proServCalc];
-                _calculatedFat.text = [NSString stringWithFormat:@"%.0f", fatServCalc];
+                labelTemp = [NSString stringWithFormat:@"%.0f", targetServCalc];
+                labelTemp = [labelTemp stringByAppendingString:@"g"];
+                _calculatedNutrient.text = labelTemp;
+                
+                labelTemp = [NSString stringWithFormat:@"%.0f", servSizeCalc];
+                labelTemp = [labelTemp stringByAppendingString:@"g"];
+                _calculatedServing.text = labelTemp;
+                
+                labelTemp = [NSString stringWithFormat:@"%.0f", carbServCalc];
+                labelTemp = [labelTemp stringByAppendingString:@"g"];
+                _calculatedCarbs.text = labelTemp;
+                
+                labelTemp = [NSString stringWithFormat:@"%.0f", proServCalc];
+                labelTemp = [labelTemp stringByAppendingString:@"g"];
+                _calculatedProtein.text = labelTemp;
+                
+                labelTemp = [NSString stringWithFormat:@"%.0f", fatServCalc];
+                labelTemp = [labelTemp stringByAppendingString:@"g"];
+                _calculatedFat.text = labelTemp;
+                
                 targetNutrient = @"Carbohydrates";
                 _saveState.text = @"";
             }
@@ -111,11 +128,26 @@ NSString *targetNutrient;
                 fatServCalc = servRatio*fatServ;
                 targetServCalc = targetServ;
                 //Output to label
-                _calculatedNutrient.text = [NSString stringWithFormat:@"%.0f", targetServCalc];
-                _calculatedServing.text = [NSString stringWithFormat:@"%.0f", servSizeCalc];
-                _calculatedCarbs.text = [NSString stringWithFormat:@"%.0f", carbServCalc];
-                _calculatedProtein.text = [NSString stringWithFormat:@"%.0f", proServCalc];
-                _calculatedFat.text = [NSString stringWithFormat:@"%.0f", fatServCalc];
+                labelTemp = [NSString stringWithFormat:@"%.0f", targetServCalc];
+                labelTemp = [labelTemp stringByAppendingString:@"g"];
+                _calculatedNutrient.text = labelTemp;
+                
+                labelTemp = [NSString stringWithFormat:@"%.0f", servSizeCalc];
+                labelTemp = [labelTemp stringByAppendingString:@"g"];
+                _calculatedServing.text = labelTemp;
+                
+                labelTemp = [NSString stringWithFormat:@"%.0f", carbServCalc];
+                labelTemp = [labelTemp stringByAppendingString:@"g"];
+                _calculatedCarbs.text = labelTemp;
+                
+                labelTemp = [NSString stringWithFormat:@"%.0f", proServCalc];
+                labelTemp = [labelTemp stringByAppendingString:@"g"];
+                _calculatedProtein.text = labelTemp;
+                
+                labelTemp = [NSString stringWithFormat:@"%.0f", fatServCalc];
+                labelTemp = [labelTemp stringByAppendingString:@"g"];
+                _calculatedFat.text = labelTemp;
+                
                 targetNutrient = @"Protein";
                 _saveState.text = @"";
             }
@@ -139,11 +171,26 @@ NSString *targetNutrient;
                 fatServCalc = targetServ;
                 targetServCalc = targetServ;
                 //Output to label
-                _calculatedNutrient.text = [NSString stringWithFormat:@"%.0f", targetServCalc];
-                _calculatedServing.text = [NSString stringWithFormat:@"%.0f", servSizeCalc];
-                _calculatedCarbs.text = [NSString stringWithFormat:@"%.0f", carbServCalc];
-                _calculatedProtein.text = [NSString stringWithFormat:@"%.0f", proServCalc];
-                _calculatedFat.text = [NSString stringWithFormat:@"%.0f", fatServCalc];
+                labelTemp = [NSString stringWithFormat:@"%.0f", targetServCalc];
+                labelTemp = [labelTemp stringByAppendingString:@"g"];
+                _calculatedNutrient.text = labelTemp;
+                
+                labelTemp = [NSString stringWithFormat:@"%.0f", servSizeCalc];
+                labelTemp = [labelTemp stringByAppendingString:@"g"];
+                _calculatedServing.text = labelTemp;
+                
+                labelTemp = [NSString stringWithFormat:@"%.0f", carbServCalc];
+                labelTemp = [labelTemp stringByAppendingString:@"g"];
+                _calculatedCarbs.text = labelTemp;
+                
+                labelTemp = [NSString stringWithFormat:@"%.0f", proServCalc];
+                labelTemp = [labelTemp stringByAppendingString:@"g"];
+                _calculatedProtein.text = labelTemp;
+                
+                labelTemp = [NSString stringWithFormat:@"%.0f", fatServCalc];
+                labelTemp = [labelTemp stringByAppendingString:@"g"];
+                _calculatedFat.text = labelTemp;
+                
                 targetNutrient = @"Fat";
                 _saveState.text = @"";
             }
@@ -164,6 +211,8 @@ NSString *targetNutrient;
         // Initialize Record
         NSManagedObject *record = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:self.managedObjectContext];
         
+        float roundedValue;
+        
         // Populate Record
             // User INPUT Data
         [record setValue:[NSDate date] forKey:@"timeStamp"];
@@ -175,10 +224,14 @@ NSString *targetNutrient;
         [record setValue:[NSNumber numberWithFloat: fatServ] forKey:@"fatServ"];
         [record setValue:[NSNumber numberWithFloat: targetServ] forKey:@"targetServ"];
             // Calculation OUTPUT Data
-        [record setValue:[NSNumber numberWithFloat: servSizeCalc] forKey:@"servSizeCalc"];
-        [record setValue:[NSNumber numberWithFloat: carbServCalc] forKey:@"carbServCalc"];
-        [record setValue:[NSNumber numberWithFloat: proServCalc] forKey:@"proServCalc"];
-        [record setValue:[NSNumber numberWithFloat: fatServCalc] forKey:@"fatServCalc"];
+        roundedValue = roundf(servSizeCalc);
+        [record setValue:[NSNumber numberWithFloat: roundedValue] forKey:@"servSizeCalc"];
+        roundedValue = roundf(carbServCalc);
+        [record setValue:[NSNumber numberWithFloat: roundedValue] forKey:@"carbServCalc"];
+        roundedValue = roundf(proServCalc);
+        [record setValue:[NSNumber numberWithFloat: roundedValue] forKey:@"proServCalc"];
+        roundedValue = roundf(fatServCalc);
+        [record setValue:[NSNumber numberWithFloat: roundedValue] forKey:@"fatServCalc"];
 
         // Save Record
         NSError *error = nil;
@@ -207,20 +260,27 @@ NSString *targetNutrient;
         _saveState.text = @"BlankEntry:ERROR";
     }
 }
-
-/*
  
  
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Make sure your segue name in storyboard is the same as this line
+    if ([[segue identifier] isEqualToString:@"showTable"])
+    {
+        // Get reference to the destination view controller
+        SavedCDTVC *vc = [segue destinationViewController];
+        
+        NSManagedObjectContext *context = self.managedObjectContext;
+        
+        // Pass any objects to the view controller here, like...
+        [vc setManagedObjectContext:context];
+        
+        //
+        vc.navigationItem.leftItemsSupplementBackButton = YES;
+    }
 }
-*/
-
-
-
 
 @end

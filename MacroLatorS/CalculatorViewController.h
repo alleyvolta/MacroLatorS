@@ -6,9 +6,14 @@
 //  Copyright © 2016 Alan Vitullo. All rights reserved.
 //
 
-#import "ViewController.h"
+#import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
-@interface CalculatorViewController : ViewController
+
+@interface CalculatorViewController : UIViewController
+
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
 // UI View Variable decleration and attachment
 @property (weak, nonatomic) IBOutlet UITextField *foodName;
 //Serving information variables
